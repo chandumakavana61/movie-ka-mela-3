@@ -96,7 +96,7 @@ let input_menu=true;
 function small_menu(e){
     if (input_menu)
     {document.getElementById('small-menu').innerHTML=`
-            <div class="absolute bg-black text-center text-2xl text-white w-full h-[100vh] left-0 top-24 z-50">
+            <div class="absolute bg-black text-center text-2xl text-white w-full h-screen left-0 top-24 z-50">
                 <ul class="my-10">
                     <li><form action="" method="get">
                 <label for="search-movie"></label>
