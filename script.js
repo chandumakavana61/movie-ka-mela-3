@@ -29,7 +29,7 @@ let movies_list = [
     title: "DS4K WEB-DL [Hindi (DD5.1) & Tamil] 4K 1080p 720p & 480p Dual Audio [x264/10Bit-HEVC] | Full Movie",
         link: "https://t.me/movie_mela_61/420"
     },
-
+    
 
 ]
 
@@ -58,6 +58,21 @@ mode_button.addEventListener('click',function(){
     });
 
 
+
+
+    window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    const [navigation] = performance.getEntriesByType('navigation');
+
+    // Check if the page load type is 'reload'
+    if (navigation && navigation.type === 'reload') {
+        loader.classList.add('opacity-0');
+        setTimeout(() => loader.style.display = 'none', 1000);
+    } else {
+        // If it's a fresh visit, hide the loader immediately
+        loader.style.display = 'none';
+    }
+});
 
 
 
@@ -108,3 +123,5 @@ function small_menu(e){
         }
 
 }
+
+menu_function()
